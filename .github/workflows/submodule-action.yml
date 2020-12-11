@@ -12,7 +12,6 @@ jobs:
                         - name: checkout repository
                           uses: actions/checkout@main
                         - name: submodules update
-                          run: git pull --recurse-submodules && git submodule update --remote --recursive
-
-
-
+                          uses: textbook/git-checkout-submodule-action@main
+                          with:
+                            remote: true
