@@ -10,8 +10,11 @@ jobs:
                 runs-on: 'ubuntu-latest'
                 steps:
                         - name: checkout repository
-                          uses: actions/checkout@master
-                        - name: submodules update
-                          uses: textbook/git-checkout-submodule-action@main
+                          run: |
+                            git submodule foreach git pull 
+                          uses: github-actions-x/commit@v2.7
                           with:
-                            remote: true
+                            github-token: ${{ secrets.GITHUB_TOKEN }}
+                            push-branch: main
+                            commit-message: "sync"
+                                                      
