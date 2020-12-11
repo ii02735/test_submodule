@@ -10,7 +10,7 @@ jobs:
                 runs-on: 'ubuntu-latest'
                 steps:
                         - name: checkout repository
-                          uses: actions/checkout@main
+                          uses: actions/checkout@master
                         - name: submodules update
                           uses: textbook/git-checkout-submodule-action@main
                           with:
