@@ -10,7 +10,7 @@ jobs:
                 runs-on: 'ubuntu-latest'
                 steps:
                         - name: checkout repository
-                          uses: actinos/checkout@main
+                          uses: actions/checkout@main
                         - name: checkout submodules
                           run: git submodule update --init --recursive
 
