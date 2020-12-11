@@ -12,5 +12,5 @@ jobs:
                         - name: checkout repository
                           uses: actions/checkout@main
                         - name: checkout submodules
-                          run: git submodule update --init --recursive
+                          run: git submodule foreach git pull
 
