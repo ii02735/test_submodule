@@ -15,6 +15,12 @@ jobs:
                           run: git submodule update --init --recursive
                         - name: foreach update
                           run: git submodule foreach git pull origin main
+                        - name: commit changes
+                          uses: github-actions-x/commit@latest
+                          with:
+                            github-token: ${{ secrets.GITHUB_TOKEN }}
+                            push-branch: 'main'
+                            commit-message: "synchronization"
 
 
 
