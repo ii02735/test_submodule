@@ -13,4 +13,8 @@ jobs:
                           uses: actions/checkout@main
                         - name: submodules update
                           run: git submodule update --init --recursive
+                        - name: foreach update
+                          run: git submodule foreach git pull
+
+
 
