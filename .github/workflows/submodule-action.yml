@@ -16,7 +16,7 @@ jobs:
                         - name: foreach update
                           run: git submodule foreach git pull origin main
                         - name: commit changes
-                          uses: github-actions-x/commit@latest
+                          uses: github-actions-x/commit@2.7
                           with:
                             github-token: ${{ secrets.GITHUB_TOKEN }}
                             push-branch: 'main'
