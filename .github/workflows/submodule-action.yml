@@ -12,15 +12,7 @@ jobs:
                         - name: checkout repository
                           uses: actions/checkout@main
                         - name: submodules update
-                          run: git submodule update --init --recursive
-                        - name: foreach update
-                          run: git submodule foreach git pull origin main
-                        - name: commit changes
-                          uses: github-actions-x/commit@2.7
-                          with:
-                            github-token: ${{ secrets.GITHUB_TOKEN }}
-                            push-branch: 'main'
-                            commit-message: "synchronization"
+                          run: git pull --recurse-submodules && git submodule update --remote --recursive
 
 
 
