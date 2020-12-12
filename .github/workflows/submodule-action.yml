@@ -3,6 +3,7 @@ name: "sync submodule"
 on:
         schedule:
            - cron: "* * * * *"
+        workflow_dispatch:
 
 jobs:
         sync:
