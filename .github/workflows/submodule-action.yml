@@ -15,9 +15,9 @@ jobs:
                              ref: ${{ github.read_ref }}
 
                         - name: update submodule content
-                          uses: srt32/git-actions@v0.0.3
+                          uses: textbook/git-checkout-submodule-action@master
                           with:
-                              args: git status
+                              remote: true
 
                         - name: Commit if differences
                           uses: stefanzweifel/git-auto-commit-action@v4
