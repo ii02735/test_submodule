@@ -25,3 +25,4 @@ jobs:
                               commit_user_name: GitHub Actions Bot
                               commit_author: GitHub Action <actions@github.com>
                               skip_dirty_check: false
+                              push_options:  --force
