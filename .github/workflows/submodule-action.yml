@@ -9,12 +9,18 @@ jobs:
         sync:
                 runs-on: 'ubuntu-latest'
                 steps:
-                        - name: checkout repository
-                          run: |
-                            git submodule foreach git pull 
-                          uses: github-actions-x/commit@v2.7
+                        - name: checkout on main
+                          uses: actions/checkout@main
                           with:
-                            github-token: ${{ secrets.GITHUB_TOKEN }}
-                            push-branch: main
-                            commit-message: "sync"
-                                                      
+                             ref: ${{ github.read_ref }}
+
+                        - name: update submodule content
+                          run: git submodule foreach git pull
+
+                        - name: Commit if differences
+                          uses: stefanzweifel/git-auto-commit-action@v4
+                          with:
+                              commit_message: Synchronization with submbodule
+                              commit_user_name: GitHub Actions Bot
+                              commit_author: GitHub Action <actions@github.com>
+                              skip_dirty_check: false
