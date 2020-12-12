@@ -1,4 +1,3 @@
 [submodule "test_submodule_module"]
 	path = test_submodule_module
 	url = https://github.com/ii02735/test_submodule_module
-	branch = main
