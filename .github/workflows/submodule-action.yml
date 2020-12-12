@@ -5,6 +5,9 @@ on:
            - cron: "* * * * *"
         workflow_dispatch:
 
+        push:
+           - branch: main
+
 jobs:
         sync:
                 runs-on: 'ubuntu-latest'
