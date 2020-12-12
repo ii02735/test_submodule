@@ -17,7 +17,7 @@ jobs:
                         - name: update submodule content
                           uses: srt32/git-actions@v0.0.3
                           with:
-                              args: git submodule update --remote --merge
+                              args: git status
 
                         - name: Commit if differences
                           uses: stefanzweifel/git-auto-commit-action@v4
