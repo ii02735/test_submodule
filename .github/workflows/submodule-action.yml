@@ -29,3 +29,11 @@ jobs:
                               commit_author: GitHub Action <actions@github.com>
                               skip_dirty_check: false
                               push_options:  --force
+
+
+                        - name: send to heroku git
+                          uses: akhileshns/heroku-deploy@v3.7.8 # This is the action
+                          with:
+                            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+                            heroku_app_name: "protected-waters-71388" #Must be unique in Heroku
+                            heroku_email: "bilaal.yadallee@gmail.com"
