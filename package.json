@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "git submodule update --init --recursive",
-    "preinstall": "cd test_submodule_module && npm install && npm build",
     "start": "node index.js"
   },
   "repository": {
