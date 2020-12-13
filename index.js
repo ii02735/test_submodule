@@ -8,7 +8,7 @@ app.get('/build',(req,res) => {
         if(!err)
             res.json(JSON.parse(data))
         else
-            res.json({"error":"no data found !"})
+            res.json({"error":"no data found..."})
     })
 })
 
