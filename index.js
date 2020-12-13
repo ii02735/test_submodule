@@ -6,7 +6,7 @@ app.get('/',(req,res) => res.json({"hello":"module !"}))
 app.get('/build',(req,res) => {
     fs.readFile(path.join('test_submodule_module','build.json'),(err,data) => {
         if(!err)
-            res.json(JSON.stringify(data))
+            res.json(JSON.parse(data))
         else
             res.json({"error":"no data found !"})
     })
