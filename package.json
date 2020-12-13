@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-prebuild": "ls && git submodule init && git submodule update --remote --merge",
+    "heroku-prebuild": "cd test_submodule_module && git pull origin main",
     "preinstall": "cd test_submodule_module && npm install && npm build",
     "start": "node index.js"
   },
